@@ -5,7 +5,9 @@
 
 # Global Laravel Template
 
-This repo tends to be updated with features I use and want to default in my future projects.
+#### This repo tends to be updated with features I use and want to default in my future projects.
+
+---
 
 ## Quick Setup
 
@@ -18,7 +20,9 @@ Following these steps should get everything working with no errors :
 3. Install all the dependencies with ```composer i``` or ```composer install```
 4. Install npm packages with ```npm i``` or ```npm install```
 
-Now, the installations should have gone well. If not, check if your PHP version is >= 8.1 on your environment. (I had to update my MAMP once to get the right versions so think about this before changing anything inside the template)
+> Now, the installations ___should___ have gone well. If not, check if your PHP version is >= 8.1 on your environment. (I had to update my MAMP once to get the right versions so think about this before changing anything inside the template)
+
+---
 
 ## Starting Local Server
 
@@ -42,7 +46,9 @@ Try and start the local server with ```npm run watch```.
 
 If it's not like this, then... change it to that and try again.
 
-For more information, I strongly suggest checking - [Laravel Mix documentation](https://laravel-mix.com/docs/6.0/installation).
+> For more information, I strongly suggest checking - [Laravel Mix documentation](https://laravel-mix.com/docs/6.0/installation).
+
+---
 
 ## Going further
 
@@ -50,24 +56,43 @@ Changing environment variables could get you lost at first but is a strong tool 
 
 Head into ```.env``` at the root of the template and play with the vars.
 
-#### Custom Local URL
+> Some commands could help as you use a lot of artisan, like : ```alias phpa='php artisan'``` and replace ```php artisan [...]``` with ```phpa [...]```. 
+
+#### <mark>Custom Local URL
 You could change ```APP_URL=localhost``` to whatever you want but will need some toying. As a mac user, I have to edit my hosts settings to allow a new local url redirection.
 Here is the technique : open ```sudo nano /etc/hosts``` and add the following lines within the Hosts Database section :
 ```
 0.0.0.0 app.test
 0.0.0.0 www.app.test
 ```
-Note : Both URLs are purely arbitrary and could be anything.
+> Note : Both URLs are purely arbitrary and could be anything.
 
-#### Configure Your Database
+#### <mark>Configure Your Database
 
-Here, you  won't  have much more to do than defaulting env variables to your DB configuration.
+Here, you  won't have much more to do than defaulting env variables to your DB configuration.
 
 Using MAMP or XAMPP, you should be able to connect to your phpmyadmin database, check your software's documentation for further reading.
 
 Using Docker, you probably already created your container by yourself and thus added your own DB config. If not, I advise that you check everything on Docker's documentation as to how to setup a database with Docker.
 
-### Relative documentations :
+---
+
+## Resolve Problems
+
+```scss
+php artisan optimize
+```
+####<p align="center">&</p>
+
+```scss
+php artisan route:clear
+```
+
+> These two commands will be important when you update your routes (whether in your ```web.php``` or in a call like ```config('app.name')``` that points on changing app's title)
+
+---
+
+## Relative documentations :
 
 - [Laravel 9](https://laravel.com).
 - [Eloquent ORM](https://laravel.com/docs/9.x/eloquent)
@@ -77,7 +102,8 @@ Using Docker, you probably already created your container by yourself and thus a
 - [Tailwind](https://tailwindcss.com/docs/installation).
 - [SCSS](https://sass-lang.com/documentation/).
 
+---
 
-## License
+## Laravel License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
