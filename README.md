@@ -82,7 +82,7 @@ Using Docker, you probably already created your container by yourself and thus a
 ```scss
 php artisan optimize
 ```
-####<p align="center">&</p>
+<p align="center">&</p>
 
 ```scss
 php artisan route:clear
