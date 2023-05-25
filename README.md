@@ -15,16 +15,17 @@ Everything is set to be installed in a few steps. The point of the template is t
 
 Following these steps should get everything working with no errors :
 
-1. Make sure your terminal is in a local server environment such as [MAMP](https://www.mamp.info/en), [XAMPP](https://www.apachefriends.org/) or a [Docker](https://www.docker.com/) container. This step is essential to have the live reload working as PHP files won't get monitored in a basic browser preview.
-2. Clone the repository using git with ```git clone [link]```
-3. Install all the dependencies with ```composer i``` or ```composer install```
-4. Install npm packages with ```npm i``` or ```npm install```
+1. Clone this repository with ```git clone https://github.com/evanhzg/laravel-template```. 
+2. Setup all prerequisite by writing ```./config.sh``` in your terminal.
+3. **IF YOU HAVE AN ISSUE**, you can still manually install all the dependencies with ```composer i``` or ```composer install``` and npm packages with ```npm i``` or ```npm install```.
 
-> Now, the installations ___should___ have gone well. If not, check if your PHP version is >= 8.1 on your environment. (I had to update my MAMP once to get the right versions so think about this before changing anything inside the template)
+> Now, the installations ___should___ have gone well. If not, check if your PHP version is >= 8.1 in your environment. (think about this before changing anything inside the template)
 
 ---
 
 ## Starting Local Server
+
+Start your Docker image by first [having Docker installed](https://docs.docker.com/engine/install/) and launched on your machine, then using ```sail up```.
 
 Try and start the local server with ```npm run watch```.
 
