@@ -1,5 +1,6 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import laravel from 'laravel-vite-plugin'
+import { defineConfig } from 'vite'
+import { createProxyMiddleware } from 'http-proxy-middleware'
 
 export default defineConfig({
     plugins: [
@@ -7,4 +8,4 @@ export default defineConfig({
             input: ['resources/js/app.js', 'resources/scss/app.scss'],
         }),
     ],
-});
+})
