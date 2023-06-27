@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Define color variables for light theme
+$light-theme: (
+    primary: #0000ff,
+    secondary: #00ff00,
+    background: #ffffff,
+    text: #000000
+);
+
+// Define color variables for dark theme
+$dark-theme: (
+    text: '#e9e4ec',
+    background: '#0d0b0f',
+    primary-button: '#9fb394',
+    secondary-button: '#000000',
+    accent: '#6a835d',
+);
+
+// Use the color variables
+body {
+    background-color: map-get($light-theme, background);
+    color: map-get($light-theme, text);
+}

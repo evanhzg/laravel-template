@@ -68,6 +68,7 @@
     "rollup": "^3.14.0",
     "safe-buffer": "^5.2.1",
     "safe-json-parse": "^1.0.1",
+    "scss": "^0.2.4",
     "side-channel": "^1.0.4",
     "source-map-js": "^1.0.2",
     "string_decoder": "^0.10.31",

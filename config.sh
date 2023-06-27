@@ -16,6 +16,14 @@ fi
 read -p "Enter a custom local URL (default: contemplates.app): " app_url
 app_url=${app_url:-contemplates.app}
 
+# Add entry to /etc/hosts
+if ! grep -q "$app_url" /etc/hosts; then
+    # If it's not, add it
+    echo "127.0.0.1 $app_url" | sudo tee -a /etc/hosts
+fi
+# Rest of your script...
+
+
 # Update APP_URL and port in .env file
 sed -i.bak "s|^APP_URL=.*|APP_URL=http://${app_url}:8888|" .env
 sed -i.bak "s|^APP_PORT=.*|APP_PORT=8888|" .env
@@ -65,3 +73,6 @@ echo $alias_command >> $shell_config
 
 # Inform the user that the alias has been added
 echo "Alias added to $shell_config. Please run 'source $shell_config' to apply changes immediately."
+
+# Print the URL of the local environment
+echo "Your local environment is set up at http://${APP_URL}:${APP_PORT}"
