@@ -7,7 +7,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('scss/app.scss') }}" rel="stylesheet">
+    <link href="{{ asset('css/variables.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ asset('js/main.js') }}" defer></script>
