@@ -1,1 +1,61 @@
-@import "app";
+@import "ui/colors.scss";
+@import "ui/buttons.scss";
+@import "ui/typography.scss";
+@import "ui/forms.scss";
+
+:root {
+    --accent: #ffdc6b;
+
+    --light: #f8f8f8;
+    --dark: #343a40;
+    --gray: #343a401e;
+
+    --bg-primary: var(--color-primary);
+    --bg-secondary: var(--secondary);
+    --bg-accent: var(--accent);
+
+    --text-primary: var(--color-primary);
+    --text-secondary: var(--secondary);
+    --text-accent: var(--accent);
+
+    --bg-light: background-color: var(--light);
+    --bg-dark: background-color: var(--dark);
+
+    --text-light: color: var(--light);
+    --text-dark: color: var(--dark);
+
+    // font sizes
+    --font-family: 'Coolvetica', sans-serif;
+
+    --aside-width: 16em;
+    --header-height: 6em;
+    --header-padding: 2em;
+
+    --padding-xs: 1.2rem;
+    --padding-sm: 2rem;
+    --padding-md: 4rem;
+    --padding-lg: 8rem;
+    --padding-xl: 10rem;
+
+    --margin-xs: 1.2rem;
+    --margin-sm: 1.5rem;
+    --margin-md: 2rem;
+    --margin-lg: 4rem;
+    --margin-xl: 6rem;
+
+    --size-xs: 1.2rem;
+    --size-sm: 2rem;
+    --size-md: 4rem;
+    --size-lg: 8rem;
+    --size-xl: 10rem;
+
+    --border-radius-xs: 0.2rem;
+    --border-radius-sm: 0.3rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+    --border-radius-xl: 2rem;
+}
+
+.bottom-shadow {
+    box-shadow: 0 1px 10px var(--color-gray);
+}

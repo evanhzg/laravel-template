@@ -1,0 +1,165 @@
+:root {
+    --border-rad-sm: var(--radius-2);
+    --border-rad-md: var(--radius-3);
+    --border-rad-lg: var(--radius-4);
+
+    --border-round: var(--radius-round);
+
+    --button-padding-block-sm: var(--size-2);
+    --button-padding-block-md: var(--size-3);
+    --button-padding-block-lg: var(--size-4);
+
+    --button-padding-inline-sm: var(--size-2);
+    --button-padding-inline-md: var(--size-4);
+    --button-padding-inline-lg: var(--size-7);
+
+    --border-primary: var(--color-primary);
+    --border-secondary: var(--color-secondary);
+    --border-accent: var(--color-accent);
+
+    --border-light: var(--color-light);
+    --border-dark: var(--color-dark);
+    --border-gray: var(--color-gray);
+
+    --border-sm: var(--border-size-1);
+    --border-md: var(--border-size-2);
+    --border-lg: var(--border-size-3);
+
+    --button-transparent: transparent;
+
+    --button-background-color: var(--bg-primary);
+}
+
+button,
+.btn {
+    border: var(--border-md) solid var(--border-primary);
+    color: var(--color-primary);
+    transition: all 0.1s ease-in-out;
+    background: var(--button-transparent);
+    max-width: fit-content;
+    user-select: none;
+}
+
+.rounded-btn {
+    --button-padding-block: var(--button-padding-block-md);
+    --button-padding-inline: var(--button-padding-inline-lg);
+
+    border-radius: var(--border-round);
+    font-size: var(--text-md);
+    padding-block: var(--button-padding-block);
+    padding-inline: var(--button-padding-inline);
+}
+
+.send-btn {
+    --button-background-color: var(--color-accent);
+
+    --button-padding-block: var(--button-padding-block-sm);
+    --button-padding-inline: var(--button-padding-inline-md);
+
+    border-color: var(--border-accent);
+    color: var(--color-accent);
+    font-weight: var(--text-bold);
+
+    padding-block: var(--button-padding-block);
+    padding-inline: var(--button-padding-inline);
+
+    max-width: 100%;
+}
+
+.menu-btn {
+    --button-padding-block: var(--button-padding-block-sm);
+    display: flex;
+    align-items: center;
+    padding: var(--button-padding-block);
+    max-width: 100%;
+    border: none;
+    transition: all 0.2s ease-in-out;
+
+    color: var(--color-dark);
+
+    border-radius: var(--border-rad-md);
+    padding: var(--button-padding-block-sm) var(--button-padding-inline-md);
+
+    li {
+        width: 100%;
+    }
+
+    &.submenu-button {
+        margin-left: calc(var(--button-padding-block) + 2.25rem);
+        width: calc(100% - var(--button-padding-block) - 2.25rem);
+    }
+
+    &:hover {
+        background-color: var(--color-dark);
+        color: var(--color-light);
+    }
+}
+
+.action-btn {
+    background-color: var(--gray);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border: none;
+    color: var(--color-dark);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-link {
+    background-color: transparent;
+    color: var(--color-dark);
+    text-align: end;
+
+    cursor: pointer;
+
+    transition: all 0.1s ease-in-out;
+    position: relative;
+    padding-right: var(--padding-xs) !important;
+}
+
+// Button animations
+
+.animated-btn-circle {
+    position: relative;
+    overflow: hidden;
+
+    span {
+        transition: all 0.3s;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--button-background-color);
+        z-index: 0;
+        transition: all 0.5s;
+        clip-path: circle(50% at 50% 50%);
+        scale: 0;
+        opacity: 0.1;
+    }
+
+    &:hover {
+        span {
+            position: inherit;
+            z-index: 1;
+        }
+        &::before {
+            scale: 2;
+        }
+    }
+}
+
+.animated-btn-arrow {
+    padding-right: calc(var(--button-padding-inline) + 1rem);
+    &:after {
+        content: ">";
+        padding-left: 0.5rem;
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+    }
+
+    &:hover:after {
+        transform: translateX(0.2rem);
+    }
+}

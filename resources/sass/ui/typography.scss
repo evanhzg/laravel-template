@@ -1,0 +1,54 @@
+@import "https://unpkg.com/open-props";
+@import "colors";
+
+:root {
+    --font-family: "Coolvetica", sans-serif;
+
+    --font-size-default: 100%;
+
+    --text-xs: var(--font-size-1);
+    --text-sm: var(--font-size-3);
+    --text-md: var(--font-size-5);
+    --text-lg: var(--font-size-6);
+    --text-xl: var(--font-size-8);
+
+    --text-thin: var(--font-weight-1);
+    --text-normal: var(--font-weight-5);
+    --text-bold: var(--font-weight-9);
+
+    --text-primary: var(--color-primary) !important;
+    --text-secondary: var(--color-secondary) !important;
+    --text-accent: var(--color-accent) !important;
+    --text-light: var(--color-light) !important;
+    --text-dark: var(--color-dark) !important;
+
+    --text-menu-color: var(--color-secondary);
+    --text-menu-size: var(--text-md);
+}
+
+h1 {
+}
+
+h2 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    font-weight: var(--text-bold);
+}
+
+h3 {
+    font-size: var(--text-md);
+}
+
+p {
+    font-size: var(--font-size-default);
+    color: var(--text-secondary);
+    font-weight: var(--text-normal);
+
+    &.text-md {
+        font-size: var(--text-md);
+    }
+
+    &.alternative-text {
+        color: var(--light);
+    }
+}
