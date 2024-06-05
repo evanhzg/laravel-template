@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "parts/footer.scss";
+@import "parts/header.scss";
 
 :root {
     --font-size-default: 16px;
