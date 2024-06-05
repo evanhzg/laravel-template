@@ -31,26 +31,28 @@
 }
 
 button,
-.btn {
+.btn,
+.rounded-btn {
     border: var(--border-md) solid var(--border-primary);
     color: var(--color-primary);
     transition: all 0.1s ease-in-out;
     background: var(--button-transparent);
     max-width: fit-content;
     user-select: none;
+    padding: var(--padding-xs) var(--padding-lg);
+    font-size: var(--font-size-default);
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+
+    cursor: pointer;
 }
 
 .rounded-btn {
-    --button-padding-block: var(--button-padding-block-md);
-    --button-padding-inline: var(--button-padding-inline-lg);
-
+    padding: var(--padding-md) var(--padding-xl) !important;
     border-radius: var(--border-round);
-    font-size: var(--text-md);
-    padding-block: var(--button-padding-block);
-    padding-inline: var(--button-padding-inline);
 }
 
-.send-btn {
+.accent-btn {
     --button-background-color: var(--color-accent);
 
     --button-padding-block: var(--button-padding-block-sm);
@@ -66,7 +68,7 @@ button,
     max-width: 100%;
 }
 
-.menu-btn {
+.select-btn {
     --button-padding-block: var(--button-padding-block-sm);
     display: flex;
     align-items: center;
@@ -80,18 +82,14 @@ button,
     border-radius: var(--border-rad-md);
     padding: var(--button-padding-block-sm) var(--button-padding-inline-md);
 
-    li {
-        width: 100%;
-    }
-
-    &.submenu-button {
-        margin-left: calc(var(--button-padding-block) + 2.25rem);
-        width: calc(100% - var(--button-padding-block) - 2.25rem);
-    }
-
     &:hover {
         background-color: var(--color-dark);
         color: var(--color-light);
+    }
+
+    &:focus {
+        color: var(--color-accent);
+        background-color: var(--color-dark);
     }
 }
 
@@ -106,16 +104,9 @@ button,
     overflow: hidden;
 }
 
-.btn-link {
-    background-color: transparent;
-    color: var(--color-dark);
-    text-align: end;
-
-    cursor: pointer;
-
-    transition: all 0.1s ease-in-out;
-    position: relative;
-    padding-right: var(--padding-xs) !important;
+.filled-btn {
+    background-color: var(--bg-primary);
+    color: var(--color-light);
 }
 
 // Button animations

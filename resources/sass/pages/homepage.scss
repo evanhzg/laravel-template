@@ -1,0 +1,10 @@
+.homepage {
+    padding: var(--container-padding-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xs);
+
+    .buttons {
+        gap: var(--padding-xs);
+    }
+}

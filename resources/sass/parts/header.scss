@@ -22,11 +22,16 @@ header {
 
     background: var(--color-light);
     top: 0;
-    padding-block: var(--padding-sm);
     position: sticky;
     height: var(--size-xl);
 
     color: var(--text-menu-color);
+
+    padding: var(--padding-md) var(--padding-xl);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     iconify-icon {
         display: block;
@@ -36,6 +41,7 @@ header {
 
     .header-content {
         --container-width: 100% !important;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
     }
@@ -124,6 +130,22 @@ header {
                         &:hover {
                             color: var(--accent);
                         }
+                    }
+                }
+            }
+            ul {
+                gap: var(--size-sm);
+                align-items: center;
+                flex-direction: row !important;
+
+                .nav-link {
+                    font-size: var(--text-menu-size);
+                    text-decoration: none;
+                    list-style: none;
+                    transition: all 0.1s ease-in-out;
+
+                    &:hover {
+                        color: var(--accent);
                     }
                 }
             }

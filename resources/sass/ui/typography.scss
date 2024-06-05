@@ -27,16 +27,22 @@
 }
 
 h1 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    font-weight: var(--text-bold);
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     color: var(--text-primary);
     font-weight: var(--text-bold);
 }
 
 h3 {
+    color: var(--text-secondary);
     font-size: var(--text-md);
+    font-weight: var(--text-bold);
 }
 
 p {
@@ -50,5 +56,17 @@ p {
 
     &.alternative-text {
         color: var(--light);
+    }
+}
+
+a {
+    color: var(--text-primary);
+    font-weight: var(--text-bold);
+    text-decoration: none;
+
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        color: var(--text-secondary);
     }
 }

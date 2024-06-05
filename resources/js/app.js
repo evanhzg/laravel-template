@@ -1,6 +1,4 @@
-import '../sass/app.scss';
-import './bootstrap';
-import '../sass/homepage.scss'
+import "../sass/app.scss";
+import "./bootstrap";
 
-
-alert('hello world');
+alert("hello world");

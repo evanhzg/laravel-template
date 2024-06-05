@@ -11,11 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/app.scss */ "./resources/sass/app.scss");
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-/* harmony import */ var _sass_homepage_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/homepage.scss */ "./resources/sass/homepage.scss");
 
 
-
-alert('hello world');
+alert("hello world");
 
 /***/ }),
 
@@ -19376,19 +19374,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/homepage.scss":
-/*!**************************************!*\
-  !*** ./resources/sass/homepage.scss ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./node_modules/axios/lib/adapters/adapters.js":
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/adapters/adapters.js ***!
@@ -24197,7 +24182,6 @@ const isThenable = (thing) =>
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
 /******/ 			"css/variables": 0,
-/******/ 			"css/homepage": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
@@ -24248,10 +24232,9 @@ const isThenable = (thing) =>
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/variables","css/homepage","css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/variables","css/homepage","css/app"], () => (__webpack_require__("./resources/sass/variables.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/variables","css/homepage","css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/variables","css/homepage","css/app"], () => (__webpack_require__("./resources/sass/homepage.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/variables","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/variables","css/app"], () => (__webpack_require__("./resources/sass/variables.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/variables","css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

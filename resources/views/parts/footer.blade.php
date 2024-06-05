@@ -6,11 +6,11 @@
             </a>
             <nav>
                 <ul>
-                    <li class="nav-link"><a href="#">{{ __('mentions légales') }}</a></li>
+                    <li class="nav-link"><a href="#">{{ __('legals') }}</a></li>
                     <li class="nav-link"><a href="#">{{ __('cookies') }}</a></li>
                 </ul>
             </nav>
         </div>
-        <p>2020-2024 evan-hoizey. All rights reserved</p>
+        <p>2020-2024 Evan Hoizey. All rights reserved</p>
     </footer>
 @endsection

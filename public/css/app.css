@@ -79,10 +79,13 @@ header {
   box-shadow: 0 1px 10px var(--gray);
   background: var(--color-light);
   top: 0;
-  padding-block: var(--padding-sm);
   position: sticky;
   height: var(--size-xl);
   color: var(--text-menu-color);
+  padding: var(--padding-md) var(--padding-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header iconify-icon {
   display: block;
@@ -91,6 +94,7 @@ header iconify-icon {
 }
 header .header-content {
   --container-width: 100% !important;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
@@ -168,6 +172,20 @@ header nav ul {
   header .header-content nav ul .nav-link:hover {
     color: var(--accent);
   }
+  header .header-content ul {
+    gap: var(--size-sm);
+    align-items: center;
+    flex-direction: row !important;
+  }
+  header .header-content ul .nav-link {
+    font-size: var(--text-menu-size);
+    text-decoration: none;
+    list-style: none;
+    transition: all 0.1s ease-in-out;
+  }
+  header .header-content ul .nav-link:hover {
+    color: var(--accent);
+  }
 }
 @media (min-width: 1200px) {
   .alternative-header {
@@ -187,6 +205,16 @@ header nav ul {
     align-items: center;
   }
 }
+.homepage {
+  padding: var(--container-padding-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xs);
+}
+.homepage .buttons {
+  gap: var(--padding-xs);
+}
+
 :root {
   --font-size-default: 16px;
   --container-padding-xs: var(--padding-xs);
@@ -220,6 +248,14 @@ html ::-webkit-scrollbar-thumb {
 body {
   width: 100%;
   font-family: var(--font-family), system-ui, -apple-system, Segoe UI, Roboto;
+}
+body #app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body #app main {
+  flex: 1;
 }
 
 * {
